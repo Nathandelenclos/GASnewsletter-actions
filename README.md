@@ -19,5 +19,25 @@ The time we greeted you.
 ```yaml
 uses: actions/hello-world-javascript-action@main
 with:
-  who-to-greet: 'Mona the Octocat'
+  base_url:
+    description: 'base url of gas project'
+    required: true
+  title:
+    description: 'Title of newsletter'
+    required: true
+  subtitle:
+    description: 'Subtitle of newsletter'
+    required: true
+  img:
+    description: 'Image in newsletter'
+    required: true
+  updateTitle:
+    description: 'Title of this update'
+    required: true
+  link:
+    description: 'link redirect of learn more button'
+    required: true
+  password:
+    description: 'password for access'
+    required: true
 ```
