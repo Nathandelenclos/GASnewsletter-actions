@@ -1,43 +1,99 @@
-# Hello world JavaScript action
+# GASNewsletter Action
+***
+[![version](https://img.shields.io/badge/Version-1.0.3-vert)](https://github.com/Nathandelenclos/GASNewsletter)
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log. To learn how this action was built, see "[Creating a JavaScript action](https://help.github.com/en/articles/creating-a-javascript-action)" in the GitHub Help documentation.
+This project is actions for Github actions.
+
+***
+## Table of Contents
+
+-  [About](#about)
+-  [Inputs](#inputs)
+-  [Outputs](#outputs)
+-  [Documentation](#documentation)
+-  [Languages](#languages)
+-  [Contact](#contact)
+-  [License](#license)
+***
+
+## About
+<div id="about"></div>
+
+This project is actions for Github actions. <br>
+Its adaptation for request [GASNewsletter](https://github.com/Nathandelenclos/GASNewsletter) with github actions
+
+***
+
 
 ## Inputs
+<div id="inputs"></div>
 
-### `who-to-greet`
+### `base_url`
+**Required** Url of your deployment.
 
-**Required** The name of the person to greet. Default `"World"`.
+### `title`
+**Required** Title of your newsletter.
+
+### `subtitle`
+**Required** Subtitle of your newsletter.
+
+### `img`
+**Required** Address of a image displayed in your newsletter.
+
+### `updateTitle`
+**Required** Title of your update.
+
+### `link`
+**Required** Link redirect of `Learn more !` button.
+
+### `password`
+**Required** Password for access.
+
+***
+
 
 ## Outputs
+<div id="outputs"></div>
 
-### `time`
+### `body`
 
-The time we greeted you.
+Response body of request.
+
+***
 
 ## Example usage
+<div id="example"></div>
 
 ```yaml
-uses: actions/hello-world-javascript-action@main
+name: GASNewsletter
+uses: Nathandelenclos/GASnewsletter-actions@1.0.3
 with:
-  base_url:
-    description: 'base url of gas project'
-    required: true
-  title:
-    description: 'Title of newsletter'
-    required: true
-  subtitle:
-    description: 'Subtitle of newsletter'
-    required: true
-  img:
-    description: 'Image in newsletter'
-    required: true
-  updateTitle:
-    description: 'Title of this update'
-    required: true
-  link:
-    description: 'link redirect of learn more button'
-    required: true
-  password:
-    description: 'password for access'
-    required: true
+  base_url: 'https://script.google.com/macros/s/AKfycbxa6awnYOz_-13orRJPwPcu78Cf3t5EGS4yGlHkSIXuzn3hMOgASseNCBGd9D6fVSYvfg/exec'
+  title: 'Project Update'
+  subtitle: ${{ github.event.repository.name }}
+  img: 'https://opengraph.githubassets.com/28bc32c10307ac9a91a585056d0e2db0/Nathandelenclos/Nathandelenclos'
+  updateTitle: ${{ github.event.head_commit.message }}
+  link: 'https://nather.ey.r.appspot.com/'
+  password: ${{ secrets.NEWSLETTER_PASSWORD }}
 ```
+
+***
+
+## Languages
+<div id="languages"></div>
+
+[![C](https://img.shields.io/badge/-Javascript-yellow)](https://github.com/dktunited/jetlane-gmao/search?l=javascript)
+
+***
+
+## Contact
+<div id="contact"></div>
+
+-  [Nathan DELENCLOS](mailto:nathan.delenclos@epitech.eu) - Developer
+
+***
+
+## License
+<div id="license"></div>
+
+[ISC](LICENSE) © Nathan DELENCLOS
