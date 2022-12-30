@@ -1,5 +1,8 @@
 name: 'GASNewsletter'
 description: 'this actions request Gas project for send newsletter'
+branding:
+  color: yellow
+  icon: archive
 inputs:
   base_url:
     description: 'base url of gas project'
