@@ -1,13 +1,30 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'GASNewsletter'
+description: 'this actions request Gas project for send newsletter'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  base_url:
+    description: 'base url of gas project'
     required: true
-    default: 'World'
+  title:
+    description: 'Title of newsletter'
+    required: true
+  subtitle:
+    description: 'Subtitle of newsletter'
+    required: true
+  img:
+    description: 'Image in newsletter'
+    required: true
+  updateTitle:
+    description: 'Title of this update'
+    required: true
+  link:
+    description: 'link redirect of learn more button'
+    required: true
+  password:
+    description: 'password for access'
+    required: true
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  body: # id of output
+    description: 'body of response HTTP'
 runs:
   using: 'node16'
   main: 'index.js'
