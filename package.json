@@ -1,24 +1,25 @@
 {
-  "name": "hello-world-javascript-action",
+  "name": "gas-newsletter-actions",
   "version": "1.0.0",
-  "description": "This action prints \"Hello World\" or \"Hello\" + the name of a person to greet to the log.",
+  "description": "this actions request Gas project for send newsletter",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/hello-world-javascript-action.git"
+    "url": "git@github.com:Nathandelenclos/GASnewsletter-actions.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nathan Delenclos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/actions/hello-world-javascript-action/issues"
+    "url": "https://github.com/Nathandelenclos/GASnewsletter-actions/issues"
   },
-  "homepage": "https://github.com/actions/hello-world-javascript-action#readme",
+  "homepage": "https://github.com/Nathandelenclos/GASnewsletter-actions#readme",
   "dependencies": {
     "@actions/core": "^1.6.0",
-    "@actions/github": "^5.0.1"
+    "@actions/github": "^5.0.1",
+    "request": "^2.88.2"
   }
 }
